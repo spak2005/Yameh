@@ -1,0 +1,15 @@
+  <FlatList data={data.favourites} renderItem={({ item }) => {
+                    return (
+                        <TouchableOpacity style={styles.popularItem} onPress={() => {
+                            navigation.push('Popular', {
+                                pizzaImg:item.thumbnail,
+                                pizzaName:item.name,
+                                pizzaRating:item.rating,
+                                pizzaPrice:item.price
+                            })
+                        }}>
+                            <Image source={{ uri: item.thumbnail }} style={{ width: 60, height: 60 }} />
+                            <Text style={styles.popularItemText}>{item.name}</Text>
+                        </TouchableOpacity>
+                    );
+                }} key={({ item }) => { item.id }} horizontal />
