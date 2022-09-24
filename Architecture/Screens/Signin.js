@@ -1,13 +1,15 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { FontAwesome } from '@expo/vector-icons';
-import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
+import { ArrowLeftCircleIcon } from 'react-native-heroicons/solid'
 import { Theme } from '../Theme/Theme';
 
 
 export default function Signin ({navigation}) {
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.push('Home')} style={{position:'absolute', marginLeft:7, marginTop:10}}>
+        <ArrowLeftCircleIcon size={40} color={'black'}/>
+      </TouchableOpacity>
       <Text style={styles.topText}>Login to your account</Text>
       
         <TextInput

@@ -9,8 +9,8 @@ export function Profile (){
                 source={require('../../assets/images/girl.jpg')}
                 style={styles.bioImg}
                 />
-                <Text style={styles.bioName}>Vitalis Orugbo</Text>
-                <Text style={styles.email}>vitalisorugbo@gmail.com</Text>
+                <Text style={styles.bioName}>Ken Emelonye</Text>
+                <Text style={styles.email}>kenemelux@gmail.com</Text>
 
                 <TouchableOpacity style={styles.editView}>
                     <Text style={styles.editDetails}>Edit details </Text>
@@ -71,12 +71,10 @@ export function Profile (){
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:Theme.color.gray,
         flex:1,
 
     },
     bio:{
-        backgroundColor:Theme.color.gray,
         alignItems:'center',
         borderRadius:20
     },

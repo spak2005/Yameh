@@ -56,6 +56,7 @@ export function Help() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
+    backgroundColor:Theme.color.white
   },
   holder:{
     flexDirection:'row',

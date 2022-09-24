@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native'
 import {React, useState} from 'react'
 import { Theme } from '../Theme/Theme'
+import CartCard from '../Components/CartCard';
 
 export function Cart() {
   const [num,setNum] = useState(0);
@@ -12,116 +13,19 @@ export function Cart() {
   const inc = () => {
    setNum(num + 1)
   }
-  let price = 20
+  let price = 200000
 
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.goodsHolder}>
-        <View style={[styles.card, styles.elevation]}>
-          <Image style={styles.img} source={require('../../assets/images/girl.jpg')}/>
-          <View style={styles.nameHolder}>
-            <Text style={styles.name}>42 inches flatscreen television</Text>
-            
-              <Text style={styles.price}>${price}</Text>
-              <Text style={styles.price}>${price*num}</Text>
-            
-            <View style={styles.numHolder}>
-              <TouchableOpacity style={styles.signView}
-               onPress={dec}>
-                <Text style={styles.signs}>-</Text>
-              </TouchableOpacity>
 
-              <Text style={styles.num}>{num}</Text>
-
-              <TouchableOpacity style={styles.signView}
-              onPress={inc}>
-                <Text style={styles.signs}>+</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View>
-            {/* Price will go here */}
-          </View>
-        </View>
-        <View style={[styles.card, styles.elevation]}>
-          <Image style={styles.img} source={require('../../assets/images/girl.jpg')}/>
-          <View style={styles.nameHolder}>
-            <Text style={styles.name}>42 inches flatscreen television</Text>
-            
-              <Text style={styles.price}>${price}</Text>
-              <Text style={styles.price}>${price*num}</Text>
-            
-            <View style={styles.numHolder}>
-              <TouchableOpacity style={styles.signView}
-               onPress={dec}>
-                <Text style={styles.signs}>-</Text>
-              </TouchableOpacity>
-
-              <Text style={styles.num}>{num}</Text>
-
-              <TouchableOpacity style={styles.signView}
-              onPress={inc}>
-                <Text style={styles.signs}>+</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View>
-            {/* Price will go here */}
-          </View>
-        </View>
-        <View style={[styles.card, styles.elevation]}>
-          <Image style={styles.img} source={require('../../assets/images/girl.jpg')}/>
-          <View style={styles.nameHolder}>
-            <Text style={styles.name}>42 inches flatscreen television</Text>
-            
-              <Text style={styles.price}>${price}</Text>
-              <Text style={styles.price}>${price*num}</Text>
-            
-            <View style={styles.numHolder}>
-              <TouchableOpacity style={styles.signView}
-               onPress={dec}>
-                <Text style={styles.signs}>-</Text>
-              </TouchableOpacity>
-
-              <Text style={styles.num}>{num}</Text>
-
-              <TouchableOpacity style={styles.signView}
-              onPress={inc}>
-                <Text style={styles.signs}>+</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View>
-            {/* Price will go here */}
-          </View>
-        </View>
-        <View style={[styles.card, styles.elevation]}>
-          <Image style={styles.img} source={require('../../assets/images/girl.jpg')}/>
-          <View style={styles.nameHolder}>
-            <Text style={styles.name}>42 inches flatscreen television</Text>
-            
-              <Text style={styles.price}>${price}</Text>
-              <Text style={styles.price}>${price*num}</Text>
-            
-            <View style={styles.numHolder}>
-              <TouchableOpacity style={styles.signView}
-               onPress={dec}>
-                <Text style={styles.signs}>-</Text>
-              </TouchableOpacity>
-
-              <Text style={styles.num}>{num}</Text>
-
-              <TouchableOpacity style={styles.signView}
-              onPress={inc}>
-                <Text style={styles.signs}>+</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-          <View>
-            {/* Price will go here */}
-          </View>
-        </View>
+      <ScrollView style={styles.goodsHolder}
+      showsVerticalScrollIndicator={false}>
+        <CartCard name='42 inches flatscreen television' price = {200000} imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/H/160872_1589392938.jpg'/>
+        <CartCard name='42 inches flatscreen television' price = {200000} imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/H/160872_1589392938.jpg'/>
+        <CartCard name='42 inches flatscreen television' price = {200000} imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/H/160872_1589392938.jpg'/>
+        <CartCard name='42 inches flatscreen television' price = {200000} imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/H/160872_1589392938.jpg'/>
       </ScrollView>
+
       <View style={styles.detailHolder}>
         <View style={styles.detail}>
           <Text style={styles.detailText}>Number of items:</Text>
@@ -129,19 +33,19 @@ export function Cart() {
         </View>
         <View style={styles.detail}>
           <Text style={styles.detailText}>Item total:</Text>
-          <Text style={styles.detailText}>$50</Text>
+          <Text style={styles.detailText}>₦50</Text>
         </View>
         <View style={styles.detail}>
           <Text style={styles.detailText}>Delivery charge:</Text>
-          <Text style={styles.detailText}>$10</Text>
+          <Text style={styles.detailText}>₦10</Text>
         </View>
         <View style={styles.detail}>
           <Text style={styles.Total}>Total:</Text>
-          <Text style={styles.Total}>$80</Text>
+          <Text style={styles.Total}>₦80</Text>
         </View>
       </View>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Checkout</Text>
+        <Text style={styles.buttonText}>Proceed to payment</Text>
       </TouchableOpacity>
     </View>
   )
@@ -149,7 +53,8 @@ export function Cart() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    padding:10
+    paddingVertical:10,
+    paddingHorizontal:20
   },
   goodsHolder:{
 
@@ -164,7 +69,7 @@ const styles = StyleSheet.create({
   },
   img:{
     height:160,
-    width:100,
+    width:130,
     marginRight:5
   },
   nameHolder:{

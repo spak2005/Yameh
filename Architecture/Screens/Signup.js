@@ -2,28 +2,37 @@ import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-nativ
 import { React, useState } from 'react'
 import { Theme } from '../Theme/Theme';
 import { RadioButton, Checkbox } from 'react-native-paper';
+import { ArrowLeftCircleIcon } from 'react-native-heroicons/solid'
 
-export default function Signup() {
+export default function Signup({navigation}) {
   const [checked, setChecked] = useState('male');
   const [checkedBox, setCheckedBox] = useState(false);
   return (
     <View style={styles.container}>
-      <Text style={styles.topText}>Create an account</Text>
+        <TouchableOpacity onPress={() => navigation.push('Signin')} style={{position:'absolute', marginLeft:7, paddingTop:10}}>
+          <ArrowLeftCircleIcon size={40} color={'black'}/>
+        </TouchableOpacity>
+        <Text style={styles.topText}>Create an account</Text>
       <TextInput
       placeholder='First name'
       style={styles.input}
+      keyboardType='default'
       />
       <TextInput
       placeholder='Last name'
       style={styles.input}
+      keyboardType='default'
       />
       <TextInput
       placeholder='Phone number'
       style={styles.input}
+      keyboardType='numeric'
+      
       />
       <TextInput
       placeholder='E-Mail'
       style={styles.input}
+      keyboardType='email-address'
       />
        <View style={styles.radioHolder}>
         <RadioButton
@@ -72,7 +81,7 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     paddingHorizontal:10,
-    paddingVertical:20
+    paddingTop:30,
   },
   topText:{
     fontSize:20,
