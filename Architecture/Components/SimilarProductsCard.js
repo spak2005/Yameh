@@ -4,7 +4,7 @@ import { StarIcon } from 'react-native-heroicons/solid'
 import { Theme } from '../Theme/Theme'
 import { useNavigation } from '@react-navigation/native'
 
-const TrendingCard = ({
+const SimilarProductsCard = ({
   id,
   imgUrl,
   title,
@@ -12,7 +12,6 @@ const TrendingCard = ({
   long,
   lat,
   short_description,
-  price
 }) => {
 
       const navigation = useNavigation();
@@ -23,8 +22,7 @@ const TrendingCard = ({
         imgUrl:imgUrl,
         title:title,
         rating:rating,
-        id:id,
-        price:price
+        id:id
       })
     }}>
       <Image source={{uri:imgUrl}} style={styles.img}/>
@@ -38,7 +36,7 @@ const TrendingCard = ({
               </Text>
           </View>
           <Text style={{marginLeft:10, fontWeight:"bold"}}>
-                ₦{price}
+                ₦200000
           </Text>
         </View>
       </View>
@@ -48,7 +46,7 @@ const TrendingCard = ({
 const styles = StyleSheet.create({
   img:{
    height:150,
-   width:140
+   width:180
   },
   cardContainer:{
     paddingHorizontal:3,
@@ -59,11 +57,10 @@ const styles = StyleSheet.create({
     paddingTop:2,
     maxWidth:200,
     fontWeight:'bold',
-    color:'#646769',
-    textAlign:'center'
+    color:'#646769'
     
     
   }
 })
 
-export default TrendingCard
+export default SimilarProductsCard

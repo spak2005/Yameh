@@ -5,7 +5,7 @@ import {MinusCircleIcon, PlusCircleIcon} from "react-native-heroicons/solid"
 
 const CartCard = (prop) => {
 
-    const [num,setNum] = useState(0);
+    const [num,setNum] = useState(1);
     const dec = () => {
       if(num > 0){
         setNum(num - 1)
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     name:{
       fontSize:12,
-      maxWidth:220,
+      maxWidth:180,
       fontWeight:'bold',
       color:'#646769'
     },

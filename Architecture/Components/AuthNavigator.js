@@ -8,6 +8,8 @@ import Signup from '../Screens/Signup';
 import ProductDisplay from '../Screens/ProductDisplay';
 import TrendingCard from './TrendingCard';
 import CategoryScreen from '../Screens/CategoryScreen';
+import { Theme } from '../Theme/Theme';
+import DescriptionScreen from '../Screens/DescriptionScreen';
 
 
 export function AuthNavigator () {
@@ -20,8 +22,9 @@ export function AuthNavigator () {
       <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
       <Stack.Screen name='Signin' component={Signin} options={{headerShown:false}}/>
       <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/>
-      <Stack.Screen name='ProductDisplay' component={ProductDisplay} options={{headerShown:true, headerTitle:'Product display'}}/>
-      <Stack.Screen name='Category' component={CategoryScreen} options={{headerShown:true, headerTitle:'Category'}}/>
+      <Stack.Screen name='ProductDisplay' component={ProductDisplay} options={{headerShown:true, headerTitle:'Details', headerStyle:{backgroundColor:Theme.color.gold}}}/>
+      <Stack.Screen name='Category' component={CategoryScreen} options={{headerShown:false, headerTitle:'Category'}}/>
+      <Stack.Screen name='Description' component={DescriptionScreen} options={{headerShown:false, headerTitle:'Description'}}/>
     </Stack.Navigator>
   )
 }

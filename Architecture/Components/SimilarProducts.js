@@ -5,62 +5,59 @@ import { Theme } from '../Theme/Theme'
 import CategoryCard from './CategoryCard'
 import TrendingCard from './TrendingCard'
 
-const Trending = (prop) => {
+const SimilarProducts = (prop) => {
   return (
     <>
-      <View style={{flexDirection:'row', alignItems:'center',marginTop: 10, justifyContent:'space-between'}}>
-        <Text style={{ fontWeight: "400", fontWeight:'bold' }}>{prop.name}</Text>
-        <ArrowRightIcon size={30} color={Theme.color.gold}/>
+      <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between', marginTop:10}}>
+        
       </View>
       <ScrollView
         horizontal
         contentContainerStyle={{
           paddingHorizontal:15,
         }}
-        paddingTop={5}
         showsHorizontalScrollIndicator={false}
         >
         {/* CategoryCard */}
         <TrendingCard
         id={10}
         rating={4.5}
-        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/V/L/67343_1657033131.jpg'
-        title='Tecno Spark 9T'
+        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/B/178303_1608528339.jpg'
+        title='Thaermocool mini deep fridge'
         short_description='Get the best fridges at the lowest prices'
-        price={200000}
 
         />
         <TrendingCard
         id={10}
-        rating={4.3}
-        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/T/112310_1632935324.jpg'
-        title=' Electric Multifunction Cooker '
+        rating={4.5}
+        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/M/171575_1652964692.jpg'
+        title='Thaermocool mini deep fridge'
         short_description='Get the best fridges at the lowest prices'
-        price={34000}
-        />
-        <TrendingCard
-        id={10}
-        rating={4.1}
-        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/J/R/86578_1632384057.jpg'
-        title='Polystar Android Curve Smart Tv'
-        short_description='Get the best fridges at the lowest prices'
-        price={50000}
+
         />
         <TrendingCard
         id={10}
         rating={4.5}
-        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/S/X/150714_1607667521.jpg'
-        title='PHCN Electricity Power Inverter '
-        short_description='Get the best fridges at the lowest prices'
-        price={59000}
-        />
-        <TrendingCard
-        id={10}
-        rating={4.9}
         imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/M/171575_1652964692.jpg'
         title='Thaermocool mini deep fridge'
         short_description='Get the best fridges at the lowest prices'
-        price={40000}
+
+        />
+        <TrendingCard
+        id={10}
+        rating={4.5}
+        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/M/171575_1652964692.jpg'
+        title='Thaermocool mini deep fridge'
+        short_description='Get the best fridges at the lowest prices'
+
+        />
+        <TrendingCard
+        id={10}
+        rating={4.5}
+        imgUrl='https://www-konga-com-res.cloudinary.com/w_850,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/U/M/171575_1652964692.jpg'
+        title='Thaermocool mini deep fridge'
+        short_description='Get the best fridges at the lowest prices'
+
         />
 
       </ScrollView>
@@ -69,4 +66,4 @@ const Trending = (prop) => {
   )
 }
 
-export default Trending
+export default SimilarProducts

@@ -31,7 +31,7 @@ export function History() {
 
   
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container} showsHorizontalScrollIndicator={false}>
       <FlatList
         data={HistoryData}
         renderItem={({ item }) => {
@@ -69,8 +69,10 @@ export function History() {
             </>
           );
         }}
+        key={({ item }) => { item.id }}
+        
       />
-    </ScrollView>
+    </View>
   );
 }
 const styles = StyleSheet.create({

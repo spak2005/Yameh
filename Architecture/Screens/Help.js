@@ -48,7 +48,7 @@ export function Help() {
         </View>
       </TouchableOpacity>
       <Text style={{fontSize:Theme.font.fontsize.button, textAlign:'center', marginTop:20}}>
-        App version: 1.00.00
+        App version: 1.0.0
       </Text>
     </View>
   )
