@@ -1,2 +1,2 @@
 # Yameh
-An app for the buying and selling of electronics
+An app that enables users to purchase electronics from the Yameh store
